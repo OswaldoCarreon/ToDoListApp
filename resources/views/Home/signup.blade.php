@@ -6,7 +6,7 @@
 
 @section('content')
 
-<div class="d-flex justify-content-center">
+<div class="d-flex justify-content-center" style="margin-top:100px;">
     <div class="col-sm-5">
         <h2 class="px-5 mt-5 text-center">Sign up</h2>
         <form class="p-5 needs-validation" action='{{route('signup.auth')}}' method="POST">

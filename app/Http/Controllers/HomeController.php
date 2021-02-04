@@ -12,11 +12,11 @@ class HomeController extends Controller
     {
         if(session('is_logged') !== null) 
         {
-            return view('welcome');
+            return view('Home.home');
         } 
         else 
         {
-            return view('Home.home');
+            return view('welcome');
         }
 
     }

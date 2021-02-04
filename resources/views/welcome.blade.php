@@ -1,74 +1,72 @@
 @extends('layouts.layout')
 
 
-@section('title', 'Home')
+@section('title', 'Welcome')
 
 
 @section('content')
-    {{-- <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-        <div class="container-fluid">
-            <a class="navbar-brand mx-2" href="" style="color: #ff0080">Mosby To Do List</a>
-            <button class="navbar-toggler m-2" style="margin-left:auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon" style="margin-left:auto"></span>
-            </button>
-
-            <div class="collapse navbar-collapse" id="navbarText">
-                <ul class="navbar-nav mb-2 mb-lg-0" style="margin-left:auto;">
-                    <li class="nav-item p-3" style="margin-left:auto"><a class="nav-link active" href="">{{session('username')}}</a></li>
-                    <li class="nav-item p-3" style="margin-left:auto"><a class="nav-link active" href='{{route('logout')}}'>Log out</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav> --}}
-
-    <h1 class="container-fluid text-center" style="margin-top:150px; margin-bottom:100px;">Your dashboard</h1>
-
-
-    <div class="container" style="width:70%;">    
-        <div class="row">
-            <div class="col-12 col-md-6 p-3" align="center">
-                <div class="card" style="width: 18rem;">
-                    <img class="card-img-top" src="img/tareas.jpg" alt="Card image cap">
-                    <div class="card-body">
-                    <h5 class="card-title">Tareas</h5>
-                    <p class="card-text">Aquí se encuentra tu lista de tareas por hacer. </p>
-                    <a href="/tareas" class="btn btn-secondary">Ver mis tareas</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-12 col-md-6 p-3" align="center">
-                <div class="card" style="width: 18rem;">
-                    <img class="card-img-top" src="img/ideas.jpg" alt="Card image cap">
-                    <div class="card-body">
-                    <h5 class="card-title">Ideas</h5>
-                    <p class="card-text">Aquí se encuentran todas tu ideas anotadas</p>
-                    <a href="/ideas" class="btn btn-secondary">Ver mis ideas</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-12 col-md-6 p-3" align="center">
-                <div class="card" style="width: 18rem;">
-                    <img class="card-img-top" src="img/compras.png" alt="Card image cap">
-                    <div class="card-body">
-                    <h5 class="card-title">Compras</h5>
-                    <p class="card-text">Aquí se encuentra tu list de cosas por comprar</p>
-                    <a href="/compras" class="btn btn-secondary">Ver mis compras</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-12 col-md-6 p-3" align="center">
-                <div class="card" style="width: 18rem;">
-                    <img class="card-img-top" src="img/rutina.jpg" alt="Card image cap">
-                    <div class="card-body">
-                    <h5 class="card-title">Rutinas</h5>
-                    <p class="card-text">Aquí se encuentran todas tur rutinas</p>
-                    <a href="/rutinas" class="btn btn-secondary">Ver rutinas</a>
-                    </div>
-                </div>
-            </div>
-        </div> 
+    
+    <div class="" style="margin-top:150px; margin-bottom:100px;">
+        <h1 class="container-fluid text-center mt-5" >Bienvenido a mi To Do List</h1>
     </div>
+    
+    
+
+    <hr style="width: 95%; margin:auto;">
+    <div class="container" style="margin-top:50px;">
+        <h2>Las funcionalidades de To Do List.</h2>
+
+        <div class="row" style="margin-top:100px; margin-bottom: 100px;">
+            <div class="col-8">
+                <h3>Tareas:</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem mollitia rerum consequuntur quam? Natus iusto nostrum qui animi molestias, amet earum iure! Et eius officia, provident vero ducimus minus blanditiis!
+                Perferendis necessitatibus libero cumque exercitationem animi ab repellendus laboriosam vitae quibusdam pariatur blanditiis cupiditate rerum corporis deserunt repellat possimus doloribus laborum nam magnam maiores quis, dicta, quidem eum? Qui, assumenda.
+                Repellat voluptates voluptatibus cumque totam laborum itaque impedit quidem. Ab recusandae accusantium labore incidunt dignissimos pariatur a iusto non temporibus maiores nesciunt, tempore voluptas neque quos, soluta ipsum laudantium consequatur?</p>
+                
+                <button class="btn btn-info">Echa un vistazo</button>
+            </div>
+
+            <div class="col-4">
+                <img src="img/taskBanner.jpg" alt="Imagen_de_tareas" class="banner-img">
+            </div>
+        </div>
+
+        <hr>
+
+        <div class="row" style="margin-top:150px; margin-bottom: 150px;">
+            <div class="col-4">
+                <img src="img/ideasBanner.jpg" alt="Imagen_de_tareas" class="banner-img">
+            </div>
+
+            <div class="col-8">
+                <h3>Ideas:</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem mollitia rerum consequuntur quam? Natus iusto nostrum qui animi molestias, amet earum iure! Et eius officia, provident vero ducimus minus blanditiis!
+                Perferendis necessitatibus libero cumque exercitationem animi ab repellendus laboriosam vitae quibusdam pariatur blanditiis cupiditate rerum corporis deserunt repellat possimus doloribus laborum nam magnam maiores quis, dicta, quidem eum? Qui, assumenda.
+                Repellat voluptates voluptatibus cumque totam laborum itaque impedit quidem. Ab recusandae accusantium labore incidunt dignissimos pariatur a iusto non temporibus maiores nesciunt, tempore voluptas neque quos, soluta ipsum laudantium consequatur?</p>
+            
+                <button class="btn btn-info">Echa un vistazo</button>    
+            </div>
+        </div>
+
+        <hr>
+       
+        <div class="row" style="margin-top:150px; margin-bottom: 250px;">
+            <div class="col-8">
+                <h3>Compras:</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem mollitia rerum consequuntur quam? Natus iusto nostrum qui animi molestias, amet earum iure! Et eius officia, provident vero ducimus minus blanditiis!
+                Perferendis necessitatibus libero cumque exercitationem animi ab repellendus laboriosam vitae quibusdam pariatur blanditiis cupiditate rerum corporis deserunt repellat possimus doloribus laborum nam magnam maiores quis, dicta, quidem eum? Qui, assumenda.
+                Repellat voluptates voluptatibus cumque totam laborum itaque impedit quidem. Ab recusandae accusantium labore incidunt dignissimos pariatur a iusto non temporibus maiores nesciunt, tempore voluptas neque quos, soluta ipsum laudantium consequatur?</p>
+            
+                <button class="btn btn-info">Echa un vistazo</button>
+            </div>
+
+            <div class="col-4">
+                <img src="img/shoppingBanner.jpg" alt="Imagen_de_tareas" class="banner-img">
+            </div>
+        </div>
+
+        
+    </div>
+    
+
 @endsection()

@@ -2,7 +2,7 @@ body {
     background: rgb(255, 255, 255);
 }
 
-img {
+.banner-img {
     width: 100%;
-    height: auto;
+    height:auto;
 }
