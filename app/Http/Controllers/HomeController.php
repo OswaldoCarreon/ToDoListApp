@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-use App\Models\HomeModel;
+use App\Models\UsuariosModel;
 
 class HomeController extends Controller
 {
@@ -34,7 +34,7 @@ class HomeController extends Controller
         $username = request('username');
         $password = md5(request("password"));
 
-        $user = HomeModel::where(
+        $user = UsuariosModel::where(
             ['user' => $username,
             'password' => $password ]
         )->first();
@@ -59,10 +59,10 @@ class HomeController extends Controller
         $username = request('username');
         $password = md5(request('password'));
 
-        $user = HomeModel::where(['user' => $username])->first();
+        $user = UsuariosModel::where(['user' => $username])->first();
 
         if( $user === null){
-            $newUser = new HomeModel();
+            $newUser = new UsuariosModel();
             $newUser->user = $username;
             $newUser->password = $password;
             $newUser->save();
