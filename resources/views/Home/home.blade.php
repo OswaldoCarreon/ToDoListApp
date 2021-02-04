@@ -5,7 +5,7 @@
 
 
 @section('content')
-    <h1 class="container-fluid text-center" style="margin-top:150px; margin-bottom:100px;">Your dashboard</h1>
+    <h1 class="container-fluid text-center" style="margin-top:50px; margin-bottom:100px;">Your dashboard</h1>
 
 
     <div class="container" style="width:70%;">    

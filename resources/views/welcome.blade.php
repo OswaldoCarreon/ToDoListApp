@@ -6,7 +6,7 @@
 
 @section('content')
     
-    <div class="" style="margin-top:150px; margin-bottom:100px;">
+    <div class="" style="margin-top:50px; margin-bottom:100px;">
         <h1 class="container-fluid text-center mt-5" >Bienvenido a mi To Do List</h1>
     </div>
     
