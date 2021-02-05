@@ -46,13 +46,14 @@
             </div>
             <div class="modal-body">
                 <form>
+                    @csrf
                     <div class="form-group">
                       <label for="tituloTrea">Titulo</label>
-                      <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                      <input type="text" id="tituloTarea" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
                     </div>
                     <div class="form-group" style="margin-top:10px;">
                       <label for="exampleInputPassword1">Descripcion</label>
-                      <textarea class="form-control" id="exampleInputPassword1" rows="10"></textarea>
+                      <textarea class="form-control" id="descripcionTarea" rows="10"></textarea>
                     </div>
                   </form>
 

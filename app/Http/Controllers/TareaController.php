@@ -16,4 +16,25 @@ class TareaController extends Controller
 
         return view('Tareas.tareasView', ["tareas" => $tareas]);
     }
+
+    public function addTask(Request $request)
+    {
+        if (session('username') === null) return redirect('/login');
+        $response = array(
+            "created" => false,
+            "data" => "",
+        );
+
+        return response()->json([$request->all()]);
+        /* $user_id = UsuariosModel::where('user', session('username'))->first()->id;
+        $newTask = new TareasModel(); */
+
+        /* $newTask->titulo = $titulo;
+        $newTask->tarea = $tarea;
+        $newTask->user_id = $user_id; 
+        $newTask->save()
+        */
+
+        //return response()->json([$user_id]);
+    }
 }

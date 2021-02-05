@@ -34,5 +34,5 @@ Route::get('compras',[ComprasController::class, 'index'])->name('compras');
 
 /* Rutas para tareas */
 Route::get('tareas', [TareaController::class, 'index'])->name('tareas');
-Route::post('tareas/newAjax', [TareaController::class, 'addTask'])->name('tareas.new');
+Route::post('tareas/newAjax', [TareaController::class, 'addTask']);
 
