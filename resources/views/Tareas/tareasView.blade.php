@@ -59,7 +59,7 @@
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn" style="background-color:#00A6D6;"" data-bs-dismiss="modal">Cancelar</button>
-                <button type="button" class="btn" style="background-color:#ff0080d3;">Crear tarea</button>
+                <button type="button" class="btn" id="newTask" style="background-color:#ff0080d3;">Crear tarea</button>
             </div>
         </div>
         </div>
