@@ -20,12 +20,29 @@ class TareaController extends Controller
     public function addTask(Request $request)
     {
         if (session('username') === null) return redirect('/login');
+
         $response = array(
-            "created" => false,
-            "data" => "",
+            "success" => false,
+            "data" => array(),
         );
 
-        return response()->json([$request->all()]);
+        $data = $request->all();
+        $tittle = $data['titulo'];
+        $task = $data['tarea'];
+
+        $newTask = new TareasModel();
+        $newTask->titulo = $tittle;
+        $newTask->tarea = $task;
+        $newTask->user_id = (UsuariosModel::where('user', session('username'))->first())->id;
+        $newTask->save();
+
+        $response['success'] = true;
+
+        return response()->json($response);
+
+
+
+        
         /* $user_id = UsuariosModel::where('user', session('username'))->first()->id;
         $newTask = new TareasModel(); */
 
@@ -36,5 +53,20 @@ class TareaController extends Controller
         */
 
         //return response()->json([$user_id]);
+    }
+
+    public function show($id)
+    {
+        return "tarea numero " . $id;
+    }
+
+    public function destroy($id)
+    {
+
+        TareasModel::destroy($id);
+        return response()->json(array(
+            "success" => true,
+            "data" => array(),
+        ));
     }
 }

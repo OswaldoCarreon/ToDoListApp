@@ -17,7 +17,7 @@
             </div>
 
             <div class="form-floating mb-3">
-                <input type="password" class="form-control" name="password" value="" placeholder="password" required autocomplete="off">
+                <input type="password" class="form-control" name="password" value="" placeholder="password" required>
                 <label for="floatingPassword">Password</label>
             </div>
             @if ( $error == 1 )

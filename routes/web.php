@@ -34,5 +34,9 @@ Route::get('compras',[ComprasController::class, 'index'])->name('compras');
 
 /* Rutas para tareas */
 Route::get('tareas', [TareaController::class, 'index'])->name('tareas');
-Route::post('tareas/newAjax', [TareaController::class, 'addTask']);
+Route::post('tareas/newAjax', [TareaController::class, 'addTask'])->name('tareas.new');
+Route::get('tareas/{id}', [TareaController::class, 'show']);
+Route::delete('tareas/destroy/{id}', [TareaController::class, 'destroy'])->name('tareas.destroy'); 
+    
+
 

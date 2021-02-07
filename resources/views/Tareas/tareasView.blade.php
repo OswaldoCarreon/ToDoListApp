@@ -19,19 +19,32 @@
 
             <div class="col-2">
                 <a style="margin-left:20px;" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                    <img src="https://img.icons8.com/flat_round/64/000000/add-file.png"/>
+                    <img id="addTaskButton" src="https://img.icons8.com/flat_round/64/000000/add-file.png"/>
                 </a>
             </div>
         </div>
-        
+     
     
         @if(count($tareas) === 0)
-            <p style="padding:100px;">:( Parece que aun no tienes tareas</p>
+            <p style="padding:100px;">:) Parece que no tienes tareas</p>
         @else
+            <div class="row" id="tareas-container" style="margin-top:70px; maring-right:0; width:99.5%">
             @foreach($tareas as $tarea)
-                <p>Titulo: {{$tarea->titulo}}</p>
-                <p>Tarea: {{$tarea->tarea}}</p>
+                <div class="col-md-2 border" style="margin:10px; padding:0;">
+                    <div class="d-flex" style="background-color:#00b7eb; padding:10px;">
+                        <a href="/tareas/{{$tarea->id}}" style="text-decoration:none; color: black;">
+                            <h3>{{$tarea->titulo}}</h3>
+                        </a>
+                        <button type="button" class="btn-close closeTask" aria-label="Close" data-taskId="{{$tarea->id}}" style="margin-left:auto;"></button>
+                    </div>
+                    <div class="body" style="padding:10px;">
+                        <p>{{$tarea->tarea}}</p>
+                    </div>
+                </div>
+
+
             @endforeach
+            </div>
         @endif
     </div>
     
@@ -49,14 +62,14 @@
                     @csrf
                     <div class="form-group">
                       <label for="tituloTrea">Titulo</label>
-                      <input type="text" id="tituloTarea" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                      <input type="text" id="tituloTarea" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" autocomplete="off">
                     </div>
                     <div class="form-group" style="margin-top:10px;">
                       <label for="exampleInputPassword1">Descripcion</label>
                       <textarea class="form-control" id="descripcionTarea" rows="10"></textarea>
                     </div>
                   </form>
-
+                <p style="color:red" id="errMssgg"></p>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn" style="background-color:#00A6D6;"" data-bs-dismiss="modal">Cancelar</button>
