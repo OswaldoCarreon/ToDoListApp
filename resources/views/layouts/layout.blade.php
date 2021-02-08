@@ -7,8 +7,9 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="/css/style.css">
     <title>@yield('title')</title>
 </head>
 <body>
@@ -24,12 +25,12 @@
                 <ul class="navbar-nav mb-2 mb-lg-0" style="margin-left:auto;">
                     <li class="nav-item p-2" style="margin-left:auto;">
                         <a href="https://github.com/OswaldoCarreon/ToDoListApp" target="_blank">
-                            <img src="img/github.png" alt="" style="width:30px; margin-top:5px; margin-right:10px;">
+                            <img src="/img/github.png" alt="" style="width:30px; margin-top:5px; margin-right:10px;">
                         </a>
                     </li>
                     <li class="nav-item p-2" style="margin-left:auto;">
                         <a href="https://www.linkedin.com/in/oswaldo-raúl-carreón-silva-277847174/" target="_blank">
-                            <img src="img/linkedin.png" alt="" style="width:30px; margin-top:5px; margin-right:10px;">
+                            <img src="/img/linkedin.png" alt="" style="width:30px; margin-top:5px; margin-right:10px;">
                         </a>
                     </li>
                         
@@ -55,5 +56,7 @@
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.19.2/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/js/bootstrap-datetimepicker.min.js"></script>
 </body>
 </html>

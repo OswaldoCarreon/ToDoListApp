@@ -17,7 +17,7 @@ $(document).ready(function () {
                 "tarea": task,
             }
             $.ajax({
-                url: "tareas/newAjax",
+                url: "tareas/create",
                 headers: { 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content') },
                 type: 'POST',
                 dataType: "json",
@@ -46,7 +46,7 @@ $(document).ready(function () {
         var taskId = $(this).data('taskid');
 
         $.ajax({
-            url: "/tareas/destroy/" + taskId,
+            url: "/tareas/" + taskId + "/delete",
             type: "DELETE",
             headers: { 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content') },
             dataType: 'json',
@@ -62,5 +62,9 @@ $(document).ready(function () {
         });
 
     });
+
+    $('#cancelUpdate').click(function () {
+        window.location.href = '../';
+    })
 
 });

@@ -32,11 +32,15 @@ Route::get('ideas', [IdeasController::class, 'index'])->name('ideas');
 Route::get('compras',[ComprasController::class, 'index'])->name('compras');
 
 
-/* Rutas para tareas */
-Route::get('tareas', [TareaController::class, 'index'])->name('tareas');
-Route::post('tareas/newAjax', [TareaController::class, 'addTask'])->name('tareas.new');
-Route::get('tareas/{id}', [TareaController::class, 'show']);
-Route::delete('tareas/destroy/{id}', [TareaController::class, 'destroy'])->name('tareas.destroy'); 
+/* ------------------------------------- Rutas para tareas */
+Route::get('tareas', [TareaController::class, 'index'])->name('tareas'); //get all
+
+Route::post('tareas/create', [TareaController::class, 'addTask'])->name('tareas.new');
+
+Route::get('tareas/{id}/edit', [TareaController::class, 'editTask'])->name('tareas.show');
+Route::put('tareas/{id}/update', [TareaController::class, 'updateTask'])->name('tareas.update');
+
+Route::delete('tareas/{id}/delete', [TareaController::class, 'destroy'])->name('tareas.destroy'); 
     
 
 

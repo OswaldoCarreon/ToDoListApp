@@ -8,10 +8,17 @@
     <style>
         a:hover{
             cursor: pointer;
+            color:#ff008080;
         }
-    </style>
-    <div class="container" style="margin-top:50px;">
+        a {
+            color:#ff0080d3;
+        }
 
+    </style>
+
+    
+    <div class="container" style="margin-top:50px;">
+        <a href="/"><i class="fa fa-arrow-left" style="font-size:35px; margin-bottom:50px;"></i></a>
         <div class="row">
             <div class="col-9">
                 <h1>Tareas</h1>
@@ -32,7 +39,7 @@
             @foreach($tareas as $tarea)
                 <div class="col-md-2 border" style="margin:10px; padding:0;">
                     <div class="d-flex" style="background-color:#00b7eb; padding:10px;">
-                        <a href="/tareas/{{$tarea->id}}" style="text-decoration:none; color: black;">
+                        <a href="{{route('tareas.show',$tarea->id)}}" style="text-decoration:none; color: black;">
                             <h3>{{$tarea->titulo}}</h3>
                         </a>
                         <button type="button" class="btn-close closeTask" aria-label="Close" data-taskId="{{$tarea->id}}" style="margin-left:auto;"></button>
@@ -41,8 +48,6 @@
                         <p>{{$tarea->tarea}}</p>
                     </div>
                 </div>
-
-
             @endforeach
             </div>
         @endif
@@ -80,9 +85,6 @@
     </div>
 
 
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.19.2/moment.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/js/bootstrap-datetimepicker.min.js"></script>
-    <script src="js/tareas.js"></script>
+    <script src="/js/tareas.js"></script>
 
 @endsection()

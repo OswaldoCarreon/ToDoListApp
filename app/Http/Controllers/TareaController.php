@@ -26,38 +26,23 @@ class TareaController extends Controller
             "data" => array(),
         );
 
-        $data = $request->all();
-        $tittle = $data['titulo'];
-        $task = $data['tarea'];
 
         $newTask = new TareasModel();
-        $newTask->titulo = $tittle;
-        $newTask->tarea = $task;
+        $newTask->titulo = $request->titulo;
+        $newTask->tarea = $request->tarea;
         $newTask->user_id = (UsuariosModel::where('user', session('username'))->first())->id;
         $newTask->save();
 
         $response['success'] = true;
 
         return response()->json($response);
-
-
-
-        
-        /* $user_id = UsuariosModel::where('user', session('username'))->first()->id;
-        $newTask = new TareasModel(); */
-
-        /* $newTask->titulo = $titulo;
-        $newTask->tarea = $tarea;
-        $newTask->user_id = $user_id; 
-        $newTask->save()
-        */
-
-        //return response()->json([$user_id]);
     }
 
-    public function show($id)
+    public function editTask($id)
     {
-        return "tarea numero " . $id;
+        $task = TareasModel::where('id', $id)->first();
+
+        return view('Tareas.updateTareaView', ["tarea" => $task]);
     }
 
     public function destroy($id)
@@ -68,5 +53,14 @@ class TareaController extends Controller
             "success" => true,
             "data" => array(),
         ));
+    }
+
+    public function updateTask(Request $request, $id)
+    {
+        $curso = TareasModel::where('id', $id)->first();
+        $curso->titulo = $request->titulo;
+        $curso->tarea = $request->tarea;
+        $curso->save();
+        return redirect()->route('tareas');
     }
 }
