@@ -25,9 +25,6 @@ Route::get('/logout', [HomeController::class,'logout'])->name('logout');
 /* Rutas para rutina */
 Route::get('rutinas', [RutinaController::class, 'index'])->name('rutinas');
 
-/* Rutas para ideas */
-Route::get('ideas', [IdeasController::class, 'index'])->name('ideas');
-
 /* Rutas para compras */
 Route::get('compras',[ComprasController::class, 'index'])->name('compras');
 
@@ -40,7 +37,11 @@ Route::post('tareas/create', [TareaController::class, 'addTask'])->name('tareas.
 Route::get('tareas/{id}/edit', [TareaController::class, 'editTask'])->name('tareas.show');
 Route::put('tareas/{id}/update', [TareaController::class, 'updateTask'])->name('tareas.update');
 
-Route::delete('tareas/{id}/delete', [TareaController::class, 'destroy'])->name('tareas.destroy'); 
-    
+Route::delete('tareas/{id}/delete', [TareaController::class, 'destroy'])->name('tareas.destroy');
+
+
+
+/* Rutas para ideas */
+Route::get('ideas', [IdeasController::class, 'index'])->name('ideas'); 
 
 
