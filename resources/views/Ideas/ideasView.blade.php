@@ -30,13 +30,39 @@
             </div>
         </div>
      
+
+
+        <div class="container" style="margin-top:100px;">
+            <div class="row justify-content-center">
+                @foreach($ideas as $idea)
+                    <div class="col-lg-3 col-md-5" style="border: 1px solid rgb(223, 223, 223); margin:10px; padding: 0;">
+                        <div class="d-flex" style="background-color:#00b7eb; padding:5px; margin:0; ">
+
+                            <a href="{{route('ideas.edit',$idea->id)}}" style="text-decoration:none; color: black;">
+                                <h3>{{$idea->titulo}}</h3>
+                            </a>
+                            <button type="button" class="btn-close deleteIdea" aria-label="Close" data-id="{{$idea->id}}" style="margin-left:auto;"></button>
+
+                        </div>
+
+                        <div class="body" style="padding:10px;">
+                            <p>{{$idea->idea}}</p>
+                        </div>
+                    </div>
+                @endforeach
+                
+            </div>
+        </div>
+
+
+
     
-        @if(count($ideas) === 0)
+        {{-- @if(count($ideas) === 0)
             <p style="padding:100px;">:() Parece que no tienes ideas</p>
         @else
             <div class="row" id="tareas-container" style="margin-top:70px; maring-right:0; width:99.5%">
             @foreach($ideas as $idea)
-                <div class="col-md-2 border" style="margin:10px; padding:0;">
+                <div class="col-md-3 border" style="margin:10px; padding:0;">
                     <div class="d-flex" style="background-color:#00b7eb; padding:10px;">
                         <a href="{{route('ideas.edit',$idea->id)}}" style="text-decoration:none; color: black;">
                             <h3>{{$idea->titulo}}</h3>
@@ -49,7 +75,7 @@
                 </div>
             @endforeach
             </div>
-        @endif
+        @endif --}}
     </div>
 
 
