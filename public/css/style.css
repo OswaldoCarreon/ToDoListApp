@@ -6,3 +6,19 @@ body {
     width: 100%;
     height:auto;
 }
+
+
+
+
+#submenu:hover {
+    outline: 0 !important;
+    background-color: #ff00808f;
+}
+
+#hover:hover{
+    color: #ff0080;
+}
+
+#hoverimg {
+    color:black;
+}

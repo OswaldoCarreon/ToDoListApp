@@ -16,8 +16,8 @@
     
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
         <div class="container-fluid">
-            <a class="navbar-brand mx-2" href="/" style="color: #ff0080">Mosby To Do List</a>
-            <button class="navbar-toggler m-2" style="margin-left:auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+            <a class="navbar-brand mx-2" href="/" id="hover">Mosby To Do List</a>
+            <button class="navbar-toggler m-2" id="submenu" style="margin-left:auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon" style="margin-left:auto"></span>
             </button>
 
@@ -25,21 +25,21 @@
                 <ul class="navbar-nav mb-2 mb-lg-0" style="margin-left:auto;">
                     <li class="nav-item p-2" style="margin-left:auto;">
                         <a href="https://github.com/OswaldoCarreon/ToDoListApp" target="_blank">
-                            <img src="/img/github.png" alt="" style="width:30px; margin-top:5px; margin-right:10px;">
+                            <img src="/img/github.png" alt="" id="hoverimg" style="width:30px; margin-top:5px; margin-right:10px;">
                         </a>
                     </li>
                     <li class="nav-item p-2" style="margin-left:auto;">
                         <a href="https://www.linkedin.com/in/oswaldo-raúl-carreón-silva-277847174/" target="_blank">
-                            <img src="/img/linkedin.png" alt="" style="width:30px; margin-top:5px; margin-right:10px;">
+                            <img src="/img/linkedin.png" alt="" id="hoverimg" style="width:30px; margin-top:5px; margin-right:10px;">
                         </a>
                     </li>
                         
                     @if( session('is_logged') !== null ) {{-- Ya está logeado --}}
-                        <li class="nav-item p-2" style="margin-left:auto;"><a class="nav-link active" href="/">{{session('username')}}</a></li>
-                        <li class="nav-item p-2" style="margin-left:auto;"><a class="nav-link active" href='{{route('logout')}}'>Log out</a></li>
+                        <li class="nav-item p-2" style="margin-left:auto;"><a class="nav-link active" id="hover" href="/">{{session('username')}}</a></li>
+                        <li class="nav-item p-2" style="margin-left:auto;"><a class="nav-link active" id="hover" href='{{route('logout')}}'>Log out</a></li>
                     @else
-                        <li class="nav-item p-2" style="margin-left:auto;"><a class="nav-link active" href='{{route('login')}}' >Log in</a></li>
-                        <li class="nav-item p-2" style="margin-left:auto;"><a class="nav-link active" href='{{route('signup')}}'>Sign up</a></li>  
+                        <li class="nav-item p-2" style="margin-left:auto;"><a class="nav-link active" id="hover" href='{{route('login')}}' >Log in</a></li>
+                        <li class="nav-item p-2" style="margin-left:auto;"><a class="nav-link active" id="hover" href='{{route('signup')}}'>Sign up</a></li>  
                     @endif
                 </ul>
             </div>
