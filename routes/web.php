@@ -42,6 +42,10 @@ Route::delete('tareas/{id}/delete', [TareaController::class, 'destroy'])->name('
 
 
 /* Rutas para ideas */
-Route::get('ideas', [IdeasController::class, 'index'])->name('ideas'); 
+Route::get('ideas', [IdeasController::class, 'index'])->name('ideas');
+Route::post('ideas/create', [IdeasController::class, 'create'])->name('ideas.create');
+Route::delete('ideas/{id}/delete', [IdeasController::class, 'delete'])->name('ideas.delete');
+Route::get('ideas/{id}/edit', [IdeasController::class, 'edit'])->name('ideas.edit');
+Route::put('ideas/{id}/update', [IdeasController::class, 'update'])->name('ideas.update');
 
 

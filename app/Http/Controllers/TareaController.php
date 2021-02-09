@@ -38,13 +38,6 @@ class TareaController extends Controller
         return response()->json($response);
     }
 
-    public function editTask($id)
-    {
-        $task = TareasModel::where('id', $id)->first();
-
-        return view('Tareas.updateTareaView', ["tarea" => $task]);
-    }
-
     public function destroy($id)
     {
 
@@ -53,6 +46,13 @@ class TareaController extends Controller
             "success" => true,
             "data" => array(),
         ));
+    }
+
+    public function editTask($id)
+    {
+        $task = TareasModel::where('id', $id)->first();
+
+        return view('Tareas.updateTareaView', ["tarea" => $task]);
     }
 
     public function updateTask(Request $request, $id)
